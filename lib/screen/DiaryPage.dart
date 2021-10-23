@@ -15,12 +15,21 @@ class _DiaryPageState extends State<DiaryPage> {
       child: Scaffold(
         backgroundColor: Color(0xFF1E1A33),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             diaryField("Umum", "assets/images/ic_umum.svg", Color(0xFF6280FF)),
-            RaisedButton(
-              onPressed: () => {},
-              child: Text("Simpan", style: TextStyle(fontSize: 14, color: Colors.white),),
-              color: Color(0xFF6280FF),
+            Padding(
+              padding: EdgeInsets.only(right: 8.0),
+              child: RaisedButton(
+                onPressed: () => {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Text(
+                  "Simpan",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+                color: Color(0xFF6280FF),
+              ),
             )
           ],
         ),
